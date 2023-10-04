@@ -9,7 +9,7 @@ const sendToken = (user, statusCode, res) => {
       ),
       httpOnly: true,
     };
-  
+  //sending response to client
     res.status(statusCode).cookie("token", token, options).json({
       success: true,
       user,

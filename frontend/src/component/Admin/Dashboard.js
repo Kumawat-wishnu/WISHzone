@@ -24,9 +24,10 @@ const Dashboard = () => {
   products &&
     products.forEach((item) => {
       if (item.Stock === 0) {
-        outOfStock += 1;
+        outOfStock+=1;  
       }
     });
+
 
   useEffect(() => {
     dispatch(getAdminProduct());
@@ -97,9 +98,9 @@ const Dashboard = () => {
           <Line data={lineState} />
         </div>
 
-        <div className="doughnutChart">
+        {/* <div className="doughnutChart">
           <Doughnut data={doughnutState} />
-        </div>
+        </div> */}
       </div>
     </div>
   );

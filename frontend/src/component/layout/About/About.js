@@ -26,7 +26,7 @@ const About = () => {
               Visit Instagram
             </Button>
             <span>
-              This is a sample wesbite made by Vishnu Only with the purpose to learn MERN Stack.
+              This is a sample wesbite made by Vishnu.
             </span>
           </div>
           <div className="aboutSectionContainer2">

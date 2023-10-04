@@ -2,7 +2,7 @@ const express=require("express");
 const { registerUser, loginUser, logout, forgotPassword, resetPassword, getUserDetails, updatePassword, updateProfile, getAllUser, getSingleUser, updateUserRole, deleteUser } = require("../controllers/userController");
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 
-const router=express.Router();
+const router=express.Router();//router that will store the instance of the Express Router. The router will be used to define routes and handle requests.
 
 router.route("/register").post(registerUser);
 router.route("/login").post(loginUser);

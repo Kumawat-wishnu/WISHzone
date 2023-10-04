@@ -4,7 +4,6 @@ const catchAsyncErrors=require("../middleware/catchAsyncError");
 const ApiFeatures = require("../utils/apifeatures");
 const cloudinary = require("cloudinary");
 
-
 //create product
 exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
   let images = [];
@@ -44,7 +43,7 @@ exports.createProduct=catchAsyncErrors(async(req,res,next)=>{
 //get all product
 exports.getAllProducts=catchAsyncErrors(async (req,res)=>{
    const resultPerPage=5;
-   const productsCount=await Product.countDocuments();
+   const productsCount=await Product.countDocuments(); // the code is sending a query to the database to count the number of documents in the "Product" collection
     const apiFeature=new ApiFeatures(Product.find(),req.query).search().filter();
     let products = await apiFeature.query;
   let filteredProductsCount = products.length;

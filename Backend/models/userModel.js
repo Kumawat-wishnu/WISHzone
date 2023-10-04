@@ -3,6 +3,8 @@ const validator=require("validator");
 const bcrypt=require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
+// bcryptjs (for converting in hash) jsonwebtoken validator(like email wale part me mail hi aaye ) nodemailer cookie-parser(json token will save in it) body-parser
+ //packages were installed for authentication part.
 
 const userSchema=new mongoose.Schema({
     name:{
