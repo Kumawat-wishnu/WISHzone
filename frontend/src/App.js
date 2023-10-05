@@ -66,6 +66,7 @@ function App() {
     getStripeApiKey();
   },[]);
 
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
  
  return (<Router>
           <Header/>
@@ -161,6 +162,11 @@ function App() {
           isAdmin={true}
           component={ProductReviews}
         />
+          {/* <Route
+          component={
+            window.location.pathname === "/process/payment" ? null : NotFound
+          }
+        /> */}
           </Switch>
 
           <Footer/>
